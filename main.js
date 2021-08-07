@@ -35,14 +35,27 @@ ejecutar.addEventListener('click', function () {
                     <td>${item.language}</td>
                     <td>${item.content_short}</td>
                     <td>
-                        <img src='${item.cover}' height='100'>
+                        <img src='${httpToHttps(item.cover)}' height='100'>
                     </td>
                 </tr>`;
+                //console.log(item.cover);
+                console.log(httpToHttps(item.cover));
             }
         }
     }
 
 });
+
+function httpToHttps(stringHttp) {
+    let stringHttps = '';
+
+    /* for (let i = 0; i <= stringHttp.length; i++) {
+        stringHttps += stringHttp[i];
+    } */
+    stringHttps = stringHttp.substr(4, stringHttp.length - 4);
+
+    return "https" + stringHttps;
+}
 
 document.body.onload = function () {
     //alert();
