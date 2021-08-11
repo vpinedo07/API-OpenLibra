@@ -39,7 +39,7 @@ ejecutar.addEventListener('click', function () {
                     </td>
                 </tr>`;
                 //console.log(item.cover);
-                console.log(httpToHttps(item.cover));
+                console.log(item.cover);
             }
         }
     }
