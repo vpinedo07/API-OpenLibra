@@ -35,7 +35,7 @@ ejecutar.addEventListener('click', function () {
                     <td>${item.language}</td>
                     <td>${item.content_short}</td>
                     <td>
-                        <img src='${httpToHttps(item.cover)}' height='100'>
+                        <img src='${item.cover}' height='100'>
                     </td>
                 </tr>`;
                 //console.log(item.cover);
